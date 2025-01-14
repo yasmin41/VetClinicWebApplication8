@@ -1,0 +1,126 @@
+﻿@model VetClinicWebApplication8.Models.Owner_Pet
+
+@{
+    ViewData["Title"] = "Edit Owner";
+}
+
+<div class="page-content">
+    <form asp-action="Edit" method="post">
+        <!-- Hidden input to store the ID -->
+        <input type="hidden" asp-for="OwnerId" />
+
+        <!-- Owner Details -->
+        <fieldset>
+            <legend>Owner Details</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="OwnerName" class="control-label"></label>
+                    <input asp-for="OwnerName" class="form-control" placeholder="Owner Name" />
+                    <span asp-validation-for="OwnerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber" class="control-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" placeholder="Address" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Pet Details -->
+        <fieldset>
+            <legend>Pet Details</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="PetName" class="control-label"></label>
+                    <input asp-for="PetName" class="form-control" placeholder="Pet Name" />
+                    <span asp-validation-for="PetName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" placeholder="Age" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sex" class="control-label"></label>
+                    <input asp-for="Sex" class="form-control" placeholder="Sex" />
+                    <span asp-validation-for="Sex" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="Pet_BD" class="control-label"></label>
+                    <input asp-for="Pet_BD" class="form-control" type="date" />
+                    <span asp-validation-for="Pet_BD" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Species" class="control-label"></label>
+                    <input asp-for="Species" class="form-control" placeholder="Species" />
+                    <span asp-validation-for="Species" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Breed" class="control-label"></label>
+                    <input asp-for="Breed" class="form-control" placeholder="Breed" />
+                    <span asp-validation-for="Breed" class="text-danger"></span>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Vaccination Details -->
+        <fieldset>
+            <legend>Vaccination Details</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="VacDose" class="control-label"></label>
+                    <input asp-for="VacDose" class="form-control" placeholder="Vaccine Dose" />
+                    <span asp-validation-for="VacDose" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vac_Date" class="control-label"></label>
+                    <input asp-for="Vac_Date" class="form-control" type="date" />
+                    <span asp-validation-for="Vac_Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NextVac_Date" class="control-label"></label>
+                    <input asp-for="NextVac_Date" class="form-control" type="date" />
+                    <span asp-validation-for="NextVac_Date" class="text-danger"></span>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Deworming Details -->
+        <fieldset>
+            <legend>Deworming Details</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="Deworming" class="control-label"></label>
+                    <input asp-for="Deworming" class="form-control" placeholder="Deworming" />
+                    <span asp-validation-for="Deworming" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DE_Date" class="control-label"></label>
+                    <input asp-for="DE_Date" class="form-control" type="date" />
+                    <span asp-validation-for="DE_Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NextDe_Date" class="control-label"></label>
+                    <input asp-for="NextDe_Date" class="form-control" type="date" />
+                    <span asp-validation-for="NextDe_Date" class="text-danger"></span>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

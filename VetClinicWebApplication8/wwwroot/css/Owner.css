@@ -1,0 +1,108 @@
+﻿.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4A9DEC;
+    margin-bottom: 10px;
+}
+
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+
+.form-group {
+    flex: 1; 
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    input:focus {
+        border-color: #4A9DEC;
+        box-shadow: 0 0 5px rgba(74, 157, 236, 0.5);
+        background-color: #fff;
+        outline: none;
+    }
+
+    input[type="date"] {
+        padding: 6px 10px;
+    }
+
+    input::placeholder {
+        color: #aaa;
+        font-style: italic;
+    }
+
+.btn-primary {
+    background-color: #4A9DEC;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #377eb8;
+    }
+
+.text-danger {
+    color: #d9534f;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+}

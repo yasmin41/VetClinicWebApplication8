@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to VetClinic System</h1>
+    <p class="lead">Easily manage pet and owner information in one place.</p>
+    <hr class="my-4">
+    <p>Start by adding a new owner or manage existing records.</p>
+    <a class="btn btn-primary btn-lg" href="/Owner/Create" role="button">Add New Owner</a>
+    <a class="btn btn-secondary btn-lg" href="/Owner/Index" role="button">Manage Owners</a>
+</div>
+<div class="container mt-5">
+    
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Owners</h5>
+                    <p class="card-text display-4">@Model.TotalOwners</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Pets</h5>
+                    <p class="card-text display-4">@Model.TotalPets</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Upcoming Vaccinations</h5>
+                    <p class="card-text display-4">@Model.UpcomingVaccinations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<img src="~/images/cat.png" alt="A cute cat"
+     style="display: block; margin-left: auto; margin-right: auto; width: 800px; height: 200px;">
